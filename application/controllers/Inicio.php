@@ -90,7 +90,6 @@ class Inicio extends CI_Controller
 		$dato_general['dato_where'] = $dato_where;
 
 		$dato['anuncio'] = $this->model_anuncio->get_list($dato_general);
-
 		$this->llamarpagina_visitante('anuncios', $dato, 'Anuncios', 'sin mensaje');
 	}
 
@@ -106,7 +105,18 @@ class Inicio extends CI_Controller
 		$dato_general['dato_where'] = $dato_where;
 		$dato_general['dato_tabla'] = $dato_tabla;
 
-		$dato['anuncio'] = $this->model_anuncio->get_list($dato_general);
+		$dato['anuncio'] = $this->model_anuncio->get_detalle_anuncio($dato_general);
+
+		$valoracion = $this->model_anuncio->get_valoracion($id_anuncio);
+		
+		$resultado_valoracion_dividendo = ($valoracion[0]->VALOR_UNO)*1 + ($valoracion[0]->VALOR_DOS)*2 + ($valoracion[0]->VALOR_TRES)*3 + ($valoracion[0]->VALOR_CUATRO)*4 + ($valoracion[0]->VALOR_CINCO)*5;
+		$resultado_valoracion_divisor = $valoracion[0]->VALOR_UNO + $valoracion[0]->VALOR_DOS + $valoracion[0]->VALOR_TRES + $valoracion[0]->VALOR_CUATRO + $valoracion[0]->VALOR_CINCO;
+		if($resultado_valoracion_divisor == 0){
+			$resultado_valoracion = 0;
+		}else{
+			$resultado_valoracion = $resultado_valoracion_dividendo/$resultado_valoracion_divisor;
+		}
+		$dato['resultado_valoracion'] = (int)$resultado_valoracion;
 
 		$dato_tabla2 = 'T_FOTO_INMUEBLE';
 		$dato_select2['*'] = '*';
@@ -252,4 +262,29 @@ class Inicio extends CI_Controller
 		$this->load->view('pages_public/contact');
 		$this->load->view('layout/footer_public', $mensaje_error);
 	}
+    public function valorar_anuncio(){
+        $puntuacion = $_POST['puntuacion'];
+        $id_anuncio = $_POST['id_anuncio'];
+
+        $dato_tabla='T_VALORACION';
+
+        if($puntuacion == 1){
+            $dato_update = 'VALOR_UNO';
+		}elseif($puntuacion == 2){
+            $dato_update ='VALOR_DOS';
+        }elseif($puntuacion == 3){
+            $dato_update ='VALOR_TRES';
+        }elseif($puntuacion == 4){
+            $dato_update ='VALOR_CUATRO';
+        }elseif($puntuacion == 5){
+            $dato_update ='VALOR_CINCO';
+        }
+        $dato_where['ID_ANUNCIO']=$id_anuncio;
+        
+        $dato_general['dato_tabla']=$dato_tabla;
+        $dato_general['dato_update']=$dato_update;
+		$dato_general['dato_where']=$dato_where;
+		
+        $respuesta= $this->model_anuncio->update_valoracion($dato_general);        
+    }
 }

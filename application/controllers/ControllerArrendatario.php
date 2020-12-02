@@ -26,7 +26,7 @@ class ControllerArrendatario extends CI_Controller
             $this->dato_usuario['foto_usuario'] = "avatar.jpg";
         }
         if (!$this->session->userdata('nombre_usuario')) {
-            redirect('ControllerLogin');
+            redirect('Inicio');
         }
     }
 	public function index()

@@ -60,7 +60,6 @@
 		<!-- Header Starts -->
 		<div class="header">
 			<a class="" href="inicio"><img src="<?php base_url() ?>assets/images/virtualroom.png" alt="Realestate" style="width:160px;"></a>
-			<a>A un click de distancia, haz realidad tus sueños</a>
 			<ul class="pull-right">			
         		<li><button class="btn-login" data-toggle="modal" data-target="#loginpop">Login</button></li>
 			</ul>

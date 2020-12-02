@@ -124,7 +124,28 @@
             width: 650,
             height: 700
         })
-    }
+	}
+	function valoracion($var1, $var2) {
+		let puntuacion = $var1;
+		let id_anuncio = $var2;
+		$.ajax({
+			type: 'POST',
+			url: "valorarAnuncio",
+			data: {
+				puntuacion: puntuacion,
+				id_anuncio: id_anuncio
+			},
+			success: function (data) {
+
+				Swal.fire({
+					title: 'Gracias por valorar el anuncio',
+					icon: 'success',
+					confirmButtonColor: '#3085d6',
+				});
+
+			}
+		});
+	}
 	</script>
 <?php } ?>
 </body>

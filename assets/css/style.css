@@ -42,14 +42,6 @@ table{background-color: #fff;}
 .header {
     padding: 20px 0;
 }
-.container.titulo{
-    display: grid;
-    grid-template-columns: 4fr 1fr 1fr;
-}
-.header h4{
-    margin: 0;
-    padding: 0;
-}
 .header ul{list-style: none;margin: 0; padding: 0;margin-top: 25px;}
 .header ul li{ display: inline-block; padding: 0 0 0 40px;}
 .header ul li a{ font-size: 19px;text-transform: uppercase;}
@@ -127,6 +119,10 @@ table{background-color: #fff;}
 
 .agents .row{margin-bottom:40px; }
 .agents .row h4{margin: 0;}
+
+.valoracion.active{
+    background-color: #72b70f;
+}
 
 .btn-login{
     color: #64a30a;

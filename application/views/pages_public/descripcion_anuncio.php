@@ -164,9 +164,12 @@
 
 							<h6><span class="glyphicon glyphicon-thumbs-up"></span> Valoracion</h6>
 							<div class="listing-detail">
-								<span data-toggle="tooltip" data-placement="bottom" data-original-title="Muy Bueno">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bueno">4</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Normal">3</span>
-								<span data-toggle="tooltip" data-placement="bottom" data-original-title="Malo">2</span>
-								<span data-toggle="tooltip" data-placement="bottom" data-original-title="Muy Malo">1</span> </div>
+								<a onclick="valoracion('5','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if($resultado_valoracion == 5){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Muy Bueno">5</span></a>
+								<a onclick="valoracion('4','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if($resultado_valoracion == 4){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Bueno">4</span></a>
+								<a onclick="valoracion('3','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if($resultado_valoracion == 3){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Normal">3</span></a>
+								<a onclick="valoracion('2','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if($resultado_valoracion == 2){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Malo">2</span></a>
+								<a onclick="valoracion('1','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if($resultado_valoracion == 1){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Muy Malo">1</span></a>								
+							</div>
 						</div>
 						<div class="col-lg-12 col-sm-6 ">
 							<div class="enquiry">

@@ -7,7 +7,8 @@ class Model_anuncio extends CI_Model
 
     public function add_anuncio_inmueble($dato)
     {
-        $sql = $this->db->insert($dato['dato_tabla'], $dato['dato_insert']);
+        $this->db->insert($dato['dato_tabla'], $dato['dato_insert']);
+        return $this->db->insert_id();
     }
 
     public function edit_anuncio($dato)
@@ -49,6 +50,7 @@ class Model_anuncio extends CI_Model
     {
         $sql = $this->db->select($dato['dato_select']);
         $sql = $this->db->from($dato['dato_tabla']);
+        $sql = $this->db->join('T_VALORACION', 'T_VALORACION.ID_ANUNCIO = T_ANUNCIO.ID_ANUNCIO');
         $sql = $this->db->join('T_INMUEBLE', 'T_INMUEBLE.ID_INMUEBLE = T_ANUNCIO.ID_INMUEBLE');
         $sql = $this->db->join('T_USUARIO_REGISTRADO', 'T_USUARIO_REGISTRADO.ID_USUARIO = T_INMUEBLE.ID_ARRENDADOR');
         $sql = $this->db->join('T_PERSONA', 'T_PERSONA.ID_PERSONA = T_USUARIO_REGISTRADO.ID_PERSONA');
@@ -58,21 +60,32 @@ class Model_anuncio extends CI_Model
         $sql = $this->db->get();
         return $sql->result();
     }
+    public function get_detalle_anuncio($dato)
+    {
+        $sql = $this->db->select($dato['dato_select']);
+        $sql = $this->db->from($dato['dato_tabla']);
+        $sql = $this->db->join('T_INMUEBLE', 'T_INMUEBLE.ID_INMUEBLE = T_ANUNCIO.ID_INMUEBLE');
+        $sql = $this->db->join('T_USUARIO_REGISTRADO', 'T_USUARIO_REGISTRADO.ID_USUARIO = T_INMUEBLE.ID_ARRENDADOR');
+        $sql = $this->db->join('T_PERSONA', 'T_PERSONA.ID_PERSONA = T_USUARIO_REGISTRADO.ID_PERSONA');
+        $sql = $this->db->join('T_FOTO_INMUEBLE', 'T_FOTO_INMUEBLE.ID_FOTO = T_ANUNCIO.PORTADA_ANUNCIO');
+        $sql = $this->db->join('T_DISTRITO', 'T_DISTRITO.ID_DISTRITO = T_INMUEBLE.ID_DISTRITO');
+        $sql = $this->db->where($dato['dato_where']);
+        $sql = $this->db->get();
+        return $sql->result();
+    }
+    public function get_valoracion($dato)
+    {
+        $sql = $this->db->select('*');
+        $sql = $this->db->from('T_VALORACION');
+        $sql = $this->db->where('ID_ANUNCIO',$dato);
+        $sql = $this->db->get();
+        return $sql->result();
+    }
 
     public function delete_anuncio($dato)
     {
         $this->db->delete($dato['dato_tabla'], $dato['dato_delete']);
     }
-
-
-
-
-
-
-
-
-
-
 
     public function view_anuncio($dato)
     {
@@ -81,5 +94,14 @@ class Model_anuncio extends CI_Model
         $sql = $this->db->where($dato['dato_where']);
         $sql = $this->db->get();
         return $sql->result();
+    }
+    public function add_valoracion($dato)
+    {
+        $this->db->insert($dato['dato_tabla'], $dato['dato_insert']);
+    }
+    public function update_valoracion($dato){
+        $this->db->set($dato['dato_update'], $dato['dato_update'] . '+1', FALSE);
+        $this->db->where($dato['dato_where']);
+        $this->db->update('T_VALORACION');                
     }
 }
