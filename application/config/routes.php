@@ -97,6 +97,7 @@ $route['grabar_anuncio'] = 'ControllerAnuncio/add_inmueble';
 $route['ver_pub'] = 'ControllerAnuncio/view_lista_anuncio';
 $route['modificar_anuncio'] = 'ControllerAnuncio/view_modificar_anuncio';
 $route['eliminar_anuncio'] = 'ControllerAnuncio/delete_anuncio';
+$route['valorarAnuncio'] = 'Inicio/valorar_anuncio';
 
 
 //GALERÍA ANUNCIO 18-11-2020

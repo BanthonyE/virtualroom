@@ -79,7 +79,17 @@
 					<form action="detalle-anuncio" method="POST">
 
 
-						<?php foreach ($anuncio as $a) { ?>
+						<?php foreach ($anuncio as $a) { 
+							$resultado_valoracion_dividendo = ($a->VALOR_UNO)*1 + ($a->VALOR_DOS)*2 + ($a->VALOR_TRES)*3 + ($a->VALOR_CUATRO)*4 + ($a->VALOR_CINCO)*5;
+							$resultado_valoracion_divisor = $a->VALOR_UNO + $a->VALOR_DOS + $a->VALOR_TRES + $a->VALOR_CUATRO + $a->VALOR_CINCO;
+							if($resultado_valoracion_divisor == 0){
+								$resultado_valoracion = 0;
+							}else{
+								$resultado_valoracion = $resultado_valoracion_dividendo/$resultado_valoracion_divisor;
+							}
+							$resultado_valoracion = (int)$resultado_valoracion;
+							
+						?>
 							<div class="col-lg-4 col-sm-6">
 								<div class="properties">
 									<input type="hidden" name="id_anuncio" value="1">
@@ -89,7 +99,13 @@
 										<a href="detalle-anuncio"><?= $a->TITULO_ANUNCIO ?></a>
 									</h4>
 									<p class="price">Price: S/. <?= $a->PRECIO_MES ?></p>
-									<div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Muy Bueno">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bueno">4</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Normal">3</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Malo">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Muy Malo">1</span> </div>
+									<div class="listing-detail">
+										<span class="valoracion <?php if($resultado_valoracion == 5){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Muy Bueno">5</span> 
+										<span class="valoracion <?php if($resultado_valoracion == 4){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Bueno">4</span> 
+										<span class="valoracion <?php if($resultado_valoracion == 3){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Normal">3</span> 
+										<span class="valoracion <?php if($resultado_valoracion == 2){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Malo">2</span> 
+										<span class="valoracion <?php if($resultado_valoracion == 1){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Muy Malo">1</span> 
+									</div>
 									<button class="btn btn-primary" id="btnDetalle" name="btnDetalle" type="submit" value="<?= $a->ID_ANUNCIO ?>">Ver Detalles</button>
 								</div>
 							</div>

@@ -25,7 +25,7 @@ class ControllerAnuncio extends CI_Controller
             $this->dato_usuario['foto_usuario'] = "avatar.jpg";
         }
         if (!$this->session->userdata('nombre_usuario')) {
-            redirect('ControllerLogin');
+            redirect('Inicio');
         }
     }
 
@@ -94,6 +94,14 @@ class ControllerAnuncio extends CI_Controller
             $respuesta = $this->model_anuncio->edit_anuncio($dato_general);
         } else {
             $respuesta = $this->model_anuncio->add_anuncio_inmueble($dato_general);
+            
+            $dato_tabla2 = 'T_VALORACION';
+            $dato_insert2['ID_ANUNCIO'] = $respuesta;
+            
+            $dato_general['dato_tabla'] = $dato_tabla2;
+            $dato_general['dato_insert'] = $dato_insert2;
+
+            $respuesta = $this->model_anuncio->add_valoracion($dato_general);
         }
         $this->view_cargar_inmueble();
     }
