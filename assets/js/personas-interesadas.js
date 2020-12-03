@@ -10,13 +10,17 @@ $('#personaInteresada').click(function () {
 	}
 
 	if ($.trim($('#telefono_interesado').val()).length == 0) {
-		error_telefono_interesado = 'Ingrese su número de celular o teléfono';
-		$('#error_telefono_interesado').text(error_telefono_interesado);
-		$('#telefono_interesado').addClass('has-error');
-	} else {
-		error_telefono_interesado = '';
-		$('#error_telefono_interesado').text(error_telefono_interesado);
-		$('#telefono_interesado').removeClass('has-error');
+        error_telefono_interesado = 'Ingrese su número de celular o teléfono';
+        $('#error_telefono_interesado').text(error_telefono_interesado);
+        $('#telefono_interesado').addClass('has-error');
+    }else if(($.trim($('#telefono_interesado').val()).length < 9) || ($.trim($('#telefono_interesado').val()).length > 11)) {
+        error_telefono_interesado = 'Ingrese su número de celular o teléfono correctamente';
+        $('#error_telefono_interesado').text(error_telefono_interesado);
+        $('#telefono_interesado').addClass('has-error');
+    } else {
+        error_telefono_interesado = '';
+        $('#error_telefono_interesado').text(error_telefono_interesado);
+        $('#telefono_interesado').removeClass('has-error');
     }
 
 	if ($.trim($('#mensaje_interesado').val()).length == 0) {

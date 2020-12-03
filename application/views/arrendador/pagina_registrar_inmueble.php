@@ -85,26 +85,26 @@ if (isset($info)) {
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="product-name">Nombre Departamento: </label>
                                     <div class="col-md-9">
-                                        <input type="text" id="txtnomb_inmueble" name="txtnomb_inmueble" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,-]{2,48}" class="form-control" placeholder="Ingresar nombre.." value="<?= $nombre ?>">
+                                        <input type="text" id="txtnomb_inmueble" name="txtnomb_inmueble" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,-]{2,48}" class="form-control" placeholder="Ingrese minimo 2 caracteres.." value="<?= $nombre ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="product-short">Numero de pisos: </label>
                                     <div class="col-md-9">
-                                        <input type="text" id="txtpisos" name="txtnumpisos" required pattern="[0-9]{1,2}" class="form-control" placeholder="Ingresar numero.." value="<?= $piso ?>">
+                                        <input type="text" id="txtpisos" name="txtnumpisos" required pattern="[0-9]{1,2}" class="form-control" placeholder="maximo 2 digitos" value="<?= $piso ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="product-short-name">Direccion: </label>
                                     <div class="col-md-9">
-                                        <textarea id="Direccion" name="txtdireccion" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,60}" class="form-control" placeholder="Escriba Direccion.." rows="3"><?= $direccion ?></textarea>
+                                        <textarea id="Direccion" name="txtdireccion" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,60}" class="form-control" placeholder="Ingrese minimo 2 caracteres.." rows="3"><?= $direccion ?></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="product-price">Numero de Direccion: </label>
                                     <div class="col-md-8">
                                         <div class="input-group">
-                                            <input type="text" id="txtnumdirec" name="txtnumdirec" required pattern="[0-9]{1,4}" class="form-control" placeholder="Ingresar Cantidad" value="<?= $numdireccion ?>">
+                                            <input type="text" id="txtnumdirec" name="txtnumdirec" required pattern="[0-9]{1,4}" class="form-control" placeholder="maximo 4 digitos" value="<?= $numdireccion ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -112,7 +112,7 @@ if (isset($info)) {
                                     <label class="col-md-3 control-label" for="product-price">Numero de Habitaciones: </label>
                                     <div class="col-md-8">
                                         <div class="input-group">
-                                            <input type="text" id="txtnumhab" name="txtnumhab" required pattern="[0-9]{1,2}" class="form-control" placeholder="Ingresar Cantidad" value="<?= $numhabitaciones ?>">
+                                            <input type="text" id="txtnumhab" name="txtnumhab" required pattern="[0-9]{1,2}" class="form-control" placeholder="maximo 2 digitos" value="<?= $numhabitaciones ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -120,7 +120,7 @@ if (isset($info)) {
                                     <label class="col-md-3 control-label" for="product-price">Numero de Baños: </label>
                                     <div class="col-md-8">
                                         <div class="input-group">
-                                            <input type="text" id="txtnumbañ" name="txtnumbañ" required pattern="[0-9]{1,2}" class="form-control" placeholder="Ingresar Cantidad" value="<?= $numbaños ?>">
+                                            <input type="text" id="txtnumbañ" name="txtnumbañ" required pattern="[0-9]{1,2}" class="form-control" placeholder="maximo 2 digitos" value="<?= $numbaños ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -128,7 +128,7 @@ if (isset($info)) {
                                     <label class="col-md-3 control-label" for="product-price">Metros Cuadrados: </label>
                                     <div class="col-md-8">
                                         <div class="input-group">
-                                            <input type="text" id="txtmetros" name="txtmetros" required pattern="[0-9]{1,3}" class="form-control" placeholder="Ingresar Cantidad" value="<?= $metrosc ?>">
+                                            <input type="text" id="txtmetros" name="txtmetros" required pattern="[0-9]{1,3}" class="form-control" placeholder="maximo 3 digitos" value="<?= $metrosc ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -141,14 +141,14 @@ if (isset($info)) {
                                     <label class="col-md-3 control-label" for="product-price">Precio por Mes: </label>
                                     <div class="col-md-8">
                                         <div class="input-group">
-                                            <input type="text" id="txtprecio" name="txtprecio" required pattern="[0-9]{1,3}" class="form-control" placeholder="Ingresar Cantidad" value="<?= $precio ?>">
+                                            <input type="text" id="txtprecio" name="txtprecio" required pattern="[0-9]{1,3}" class="form-control" placeholder="maximo 3 digitos" value="<?= $precio ?>">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="product-short-name">Descripcion del Departamento: </label>
                                     <div class="col-md-9">
-                                        <textarea id="Descripcion" name="txtdescripcion" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,60}" class="form-control" placeholder="Escriba Direccion.." rows="7"> <?= $descrip ?></textarea>
+                                        <textarea id="Descripcion" name="txtdescripcion" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,60}" class="form-control" placeholder="Ingrese minimo 2 caracteres.." rows="7"> <?= $descrip ?></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -187,7 +187,7 @@ if (isset($info)) {
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="product-short-name">Servicios del Departamento: </label>
                                     <div class="col-md-9">
-                                        <textarea id="txtservicios" name="txtservicios" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,60}" class="form-control" placeholder="Escriba descripcion.." rows="3"><?= $servicios ?></textarea>
+                                        <textarea id="txtservicios" name="txtservicios" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,60}" class="form-control" placeholder="Ingrese minimo 2 caracteres.." rows="3"><?= $servicios ?></textarea>
                                     </div>
                                 </div>
 

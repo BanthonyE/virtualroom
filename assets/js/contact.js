@@ -24,14 +24,18 @@ $('#enviarEmail').click(function () {
 
 
 	if ($.trim($('#txtcontacto').val()).length == 0) {
-		error_txtcontacto = 'Ingrese su número de celular o teléfono';
-		$('#error_txtcontacto').text(error_txtcontacto);
-		$('#txtcontacto').addClass('has-error');
-	} else {
-		error_txtcontacto = '';
-		$('#error_txtcontacto').text(error_txtcontacto);
-		$('#txtcontacto').removeClass('has-error');
-	}
+        error_txtcontacto = 'Ingrese su número de celular o teléfono';
+        $('#error_txtcontacto').text(error_txtcontacto);
+        $('#txtcontacto').addClass('has-error');
+    }else if(($.trim($('#txtcontacto').val()).length < 9) || ($.trim($('#txtcontacto').val()).length > 11)) {
+        error_txtcontacto = 'Ingrese su número de celular o teléfono correctamente';
+        $('#error_txtcontacto').text(error_txtcontacto);
+        $('#txtcontacto').addClass('has-error');
+    }else {
+        error_txtcontacto = '';
+        $('#error_txtcontacto').text(error_txtcontacto);
+        $('#txtcontacto').removeClass('has-error');
+    }
 
 	var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 	if ($.trim($('#txtemail').val()).length == 0) {
