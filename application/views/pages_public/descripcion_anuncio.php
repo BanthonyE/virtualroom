@@ -176,16 +176,16 @@
 								<h6><span class="glyphicon glyphicon-envelope"></span> Enviar Mensaje</h6>
 								<input type="hidden" id="id_inmueble" name="id_inmueble" value="<?= $anuncio[0]->ID_ANUNCIO ?>">
 								<span id="error_nombre_interesado" class="text-danger"></span>
-								<input type="text" id="nombre_interesado" name="nombre_interesado" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ]{2,48}" class="form-control" placeholder="Ingrese su nombre" />
+								<input type="text" id="nombre_interesado" name="nombre_interesado" required class="form-control" placeholder="Ingrese su nombre" />
 
 								<span id="error_correo_interesado" class="text-danger"></span>
-								<input type="text" id="correo_interesado" name="correo_interesado" class="form-control" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required placeholder="correo@virtual.room" />
+								<input type="text" id="correo_interesado" name="correo_interesado" class="form-control" required placeholder="correo@virtual.room" />
 
 								<span id="error_telefono_interesado" class="text-danger"></span>
-								<input type="text" id="telefono_interesado" name="telefono_usuario" class="form-control" required pattern="[0-9]{9,11}" placeholder="Numero telefonico" />
+								<input type="text" id="telefono_interesado" name="telefono_usuario" class="form-control" required placeholder="Numero telefonico min 9 max 11" />
 
 								<span id="error_mensaje_interesado" class="text-danger"></span>
-								<textarea id="mensaje_interesado" name="mensaje_interesado" rows="6" class="form-control" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" placeholder="Cual es el interes por el departamento?"></textarea>
+								<textarea id="mensaje_interesado" name="mensaje_interesado" rows="6" class="form-control" required placeholder="Cual es el interes por el departamento?"></textarea>
 
 								<button type="button" id="personaInteresada" mame="personaInteresada" class="btn btn-primary">Enviar Mensaje</button>
 							</div>
