@@ -6,6 +6,8 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+	<link rel="shortcut icon" type="image/x-icon" href="<?php base_url() ?>assets/images/favicon.ico">
+
 	<link rel="stylesheet" href="<?php base_url() ?>assets/bootstrap/css/bootstrap.css" />
 	<link rel="stylesheet" href="<?php base_url() ?>assets/css/style.css" />
 	<link rel="stylesheet" href="<?php base_url() ?>assets/libs/sweetalert2/dist/sweetalert2.min.css" />
