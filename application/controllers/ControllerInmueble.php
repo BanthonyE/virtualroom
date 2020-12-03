@@ -1,26 +1,27 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class ControllerInmueble extends CI_Controller {
+class ControllerInmueble extends CI_Controller
+{
 
-	function __construct()
-	{
-	   
-	);
-
-	public function add(){
-
+    function __construct()
+    {
+        //NO SALEEEEEEEEEEEEEEEEEEEEEEEEEE EFEEEEE ETECCEEE
     }
 
-    public function edit(){
-
+    public function add()
+    {
     }
 
-    public function view(){
-
+    public function edit()
+    {
     }
 
-    public function delete(){
+    public function view()
+    {
+    }
 
+    public function delete()
+    {
     }
 }
