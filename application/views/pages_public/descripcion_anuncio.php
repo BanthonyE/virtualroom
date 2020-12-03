@@ -164,11 +164,11 @@
 
 							<h6><span class="glyphicon glyphicon-thumbs-up"></span> Valoracion</h6>
 							<div class="listing-detail">
-								<a onclick="valoracion('5','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if($resultado_valoracion == 5){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Muy Bueno">5</span></a>
-								<a onclick="valoracion('4','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if($resultado_valoracion == 4){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Bueno">4</span></a>
-								<a onclick="valoracion('3','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if($resultado_valoracion == 3){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Normal">3</span></a>
-								<a onclick="valoracion('2','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if($resultado_valoracion == 2){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Malo">2</span></a>
-								<a onclick="valoracion('1','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if($resultado_valoracion == 1){ ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Muy Malo">1</span></a>								
+								<a onclick="valoracion('5','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if ($resultado_valoracion == 5) { ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Muy Bueno">5</span></a>
+								<a onclick="valoracion('4','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if ($resultado_valoracion == 4) { ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Bueno">4</span></a>
+								<a onclick="valoracion('3','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if ($resultado_valoracion == 3) { ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Normal">3</span></a>
+								<a onclick="valoracion('2','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if ($resultado_valoracion == 2) { ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Malo">2</span></a>
+								<a onclick="valoracion('1','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if ($resultado_valoracion == 1) { ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Muy Malo">1</span></a>
 							</div>
 						</div>
 						<div class="col-lg-12 col-sm-6 ">
@@ -176,16 +176,16 @@
 								<h6><span class="glyphicon glyphicon-envelope"></span> Enviar Mensaje</h6>
 								<input type="hidden" id="id_inmueble" name="id_inmueble" value="<?= $anuncio[0]->ID_ANUNCIO ?>">
 								<span id="error_nombre_interesado" class="text-danger"></span>
-								<input type="text" id="nombre_interesado" name="nombre_interesado" class="form-control" placeholder="Ingrese su nombre" />
+								<input type="text" id="nombre_interesado" name="nombre_interesado" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ]{2,48}" class="form-control" placeholder="Ingrese su nombre" />
 
 								<span id="error_correo_interesado" class="text-danger"></span>
-								<input type="text" id="correo_interesado" name="correo_interesado" class="form-control" placeholder="correo@virtual.room" />
+								<input type="text" id="correo_interesado" name="correo_interesado" class="form-control" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required placeholder="correo@virtual.room" />
 
 								<span id="error_telefono_interesado" class="text-danger"></span>
-								<input type="text" id="telefono_interesado" name="telefono_usuario" class="form-control" placeholder="Numero telefonico" />
+								<input type="text" id="telefono_interesado" name="telefono_usuario" class="form-control" required pattern="[0-9]{9,11}" placeholder="Numero telefonico" />
 
 								<span id="error_mensaje_interesado" class="text-danger"></span>
-								<textarea id="mensaje_interesado" name="mensaje_interesado" rows="6" class="form-control" placeholder="Cual es el interes por el departamento?"></textarea>
+								<textarea id="mensaje_interesado" name="mensaje_interesado" rows="6" class="form-control" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" placeholder="Cual es el interes por el departamento?"></textarea>
 
 								<button type="button" id="personaInteresada" mame="personaInteresada" class="btn btn-primary">Enviar Mensaje</button>
 							</div>

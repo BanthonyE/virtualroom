@@ -122,13 +122,13 @@ if (isset($visitante)) {
                         <div class="form-group">
                             <label class="col-md-3 control-label">Nombres</label>
                             <div class="col-md-9">
-                                <input type="text" id="product-name" name="txtnombre" class="form-control" value=" <?= $nomb_visitante ?>">
+                                <input type="text" id="product-name" name="txtnombre" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ]{2,48}" class="form-control" value=" <?= $nomb_visitante ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Apellidos</label>
                             <div class="col-md-9">
-                                <input type="text" id="product-name" name="txtapellido" class="form-control" value=" <?= $ape_visitante ?>">
+                                <input type="text" id="product-name" name="txtapellido" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ]{2,48}" class="form-control" value=" <?= $ape_visitante ?>">
                             </div>
                         </div>
                         <div class="form-group">
@@ -145,7 +145,7 @@ if (isset($visitante)) {
                         <div class="form-group">
                             <label class="col-md-3 control-label">Numero de Documento</label>
                             <div class="col-md-9">
-                                <input type="text" id="product-name" name="txtdni" class="form-control" value=" <?= $nro_documento ?>">
+                                <input type="text" id="product-name" name="txtdni" required pattern="[0-9]{8,12}" class="form-control" value=" <?= $nro_documento ?>">
                             </div>
                         </div>
                         <div class="form-group">
@@ -170,31 +170,31 @@ if (isset($visitante)) {
                         <div class="form-group">
                             <label class="col-md-3 control-label">Celular</label>
                             <div class="col-md-9">
-                                <input type="text" id="product-name" name="txtcel" class="form-control" value="<?= $telefono ?>">
+                                <input type="text" id="product-name" name="txtcel" required pattern="[0-9]{9,11}" class="form-control" value="<?= $telefono ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Direccion</label>
                             <div class="col-md-9">
-                                <input type="text" id="product-name" name="txtdireccion" class="form-control" value="<?= $direccionper ?>">
+                                <input type="text" id="product-name" name="txtdireccion" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" class="form-control" value="<?= $direccionper ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Email</label>
                             <div class="col-md-9">
-                                <input type="text" id="product-name" name="txtemail" class="form-control" value="<?= $correo ?>">
+                                <input type="text" id="product-name" name="txtemail" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required class="form-control" value="<?= $correo ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Nombre de Usuario</label>
                             <div class="col-md-9">
-                                <input type="text" id="product-name" name="txtusu" class="form-control" placeholder="Ingresar Nombre de usuario" value="<?= $nomb_usu ?>">
+                                <input type="text" id="product-name" name="txtusu" class="form-control" pattern="^([a-z]+[0-9]{0,2}){5,12}$" required placeholder="Ingresar Nombre de usuario" value="<?= $nomb_usu ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Contraseña</label>
                             <div class="col-md-9">
-                                <input type="text" id="product-name" name="txtpass" class="form-control" value="<?= $pass_usu ?>">
+                                <input type="text" id="product-name" pattern="[A-Za-z0-9]{8,12}" required name="txtpass" class="form-control" value="<?= $pass_usu ?>">
                             </div>
                         </div>
                         <div class="form-group form-actions">
