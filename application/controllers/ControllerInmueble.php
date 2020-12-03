@@ -6,7 +6,7 @@ class ControllerInmueble extends CI_Controller
 
     function __construct()
     {
-        //PROBANDOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  
+        //NO SALEEEEEEEEEEEEEEEEEEEEEEEEEE EFEEEEE ETECCEEE
     }
 
     public function add()
