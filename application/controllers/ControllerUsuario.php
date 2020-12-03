@@ -70,7 +70,7 @@ class ControllerUsuario extends CI_Controller
         $respuesta_estado_usuario = $this->model_usuario->obtener_validacion($datos);
 
         if (isset($respuesta_estado_usuario)) {
-            if ($tipo_usuario_login == 'admin' && $respuesta_estado_usuario->NOMBRE_TIPO == 'Arrendador') {
+            if ($tipo_usuario_login == 'publico' && $respuesta_estado_usuario->NOMBRE_TIPO == 'Arrendador') {
                 $resp = $this->model_usuario->consultar_usuario($respuesta_estado_usuario->ID_USUARIO);
 
                 if ($resp) {
