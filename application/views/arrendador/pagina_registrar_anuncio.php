@@ -77,13 +77,13 @@ if (isset($info)) {
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="product-short-name">Título del anuncio: </label>
                             <div class="col-md-9">
-                                <input type="text" id="txttitulo" name="txttitulo" required class="form-control" placeholder="Escriba el título del anuncio" value="<?= $titulo_anuncio ?>"/>
+                                <input type="text" id="txttitulo" name="txttitulo" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,60}" class="form-control" placeholder="Escriba el título del anuncio" value="<?= $titulo_anuncio ?>" />
                             </div>
-                        </div>                        
+                        </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="product-short-name">Descripcion: </label>
                             <div class="col-md-9">
-                                <textarea id="txtdescripcion" name="txtdescripcion" required pattern="[A-Za-z0-9]+" class="form-control" placeholder="Escriba Direccion.." rows="3"><?= $descrip ?></textarea>
+                                <textarea id="txtdescripcion" name="txtdescripcion" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,60}" class="form-control" placeholder="Escriba Direccion.." rows="3"><?= $descrip ?></textarea>
                             </div>
                         </div>
                         <div class="form-group">
