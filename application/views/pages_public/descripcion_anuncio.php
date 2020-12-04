@@ -135,11 +135,11 @@
 						<div>
 							<h4><span class="glyphicon glyphicon-map-marker"></span> Localizacion</h4>
 							<div class="well" id="map" style="width:100%;height:400px">
-								<input type="text" value="<?= $anuncio[0]->direccion_inmueble ?>" id="direccion">
-								<input type="text" value="<?= $anuncio[0]->NRO_DIRECCION ?>" id="numdireccion">
+								<input type="hidden" value="<?= $anuncio[0]->direccion_inmueble ?>" id="direccion">
+								<input type="hidden" value="<?= $anuncio[0]->NRO_DIRECCION ?>" id="numdireccion">
 								<?php foreach ($distrito as $d) { ?>	
 									<?php if($d->ID_DISTRITO == $anuncio[0]->ID_DISTRITO) { ?>		
-										<input type="text" value="<?= $anuncio[0]->NOMB_DISTRITO ?>" id="distrito">
+										<input type="hidden" value="<?= $anuncio[0]->NOMB_DISTRITO ?>" id="distrito">
 									<?php } ?>		
 								<?php } ?>
 								<!-- <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Pulchowk,+Patan,+Central+Region,+Nepal&amp;aq=0&amp;oq=pulch&amp;sll=37.0625,-95.677068&amp;sspn=39.371738,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Pulchowk,+Patan+Dhoka,+Patan,+Bagmati,+Central+Region,+Nepal&amp;ll=27.678236,85.316853&amp;spn=0.001347,0.002642&amp;t=m&amp;z=14&amp;output=embed"></iframe> -->
