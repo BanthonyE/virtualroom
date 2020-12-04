@@ -52,10 +52,7 @@ class ControllerAnuncio extends CI_Controller
         $dato_general['dato_where'] = $dato_where;
         $dato_general['dato_tabla'] = $dato_tabla;
 
-        $datos['inmueble'] = $this->model_inmueble->buscar_inmueble($dato_general);
-/*         $datos['inmueble_anuncio'] = $this->model_inmueble->buscar_inmueble_anuncio($dato_id_usuario);
-
-        var_dump($datos['inmueble_anuncio']);die(); */
+        $datos['inmueble'] = $this->model_inmueble->buscar_inmueble_anuncio($dato_id_usuario);
 
         $this->llamarpagina('pagina_registrar_anuncio', $datos);
     }

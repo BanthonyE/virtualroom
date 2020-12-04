@@ -23,15 +23,24 @@ class Model_inmueble extends CI_Model
 
         return $sql->result();
     }
-/*     public function buscar_inmueble_anuncio($dato)
+    public function buscar_inmueble_distrito($dato)
     {
         $sql = $this->db->select('*');
         $sql = $this->db->from('T_INMUEBLE inm');
-        
-        $sql = $this->db->where('ID_ARRENDADOR', $dato);
+        $sql = $this->db->join('T_DISTRITO dis', 'dis.ID_DISTRITO = inm.ID_DISTRITO');
+        $sql = $this->db->where('inm.ID_INMUEBLE', $dato);
         $sql = $this->db->get();
         return $sql->result();
-    } */
+    }
+    public function buscar_inmueble_anuncio($dato)
+    {
+        $sql = $this->db->select('inm.ID_INMUEBLE, inm.NOMB_INMUEBLE');
+        $sql = $this->db->from('T_INMUEBLE inm');
+        $sql = $this->db->join('T_ANUNCIO anu', 'anu.ID_INMUEBLE = inm.ID_INMUEBLE','left');
+        $sql = $this->db->where('anu.ID_ARRENDADOR', null);
+        $sql = $this->db->get();
+        return $sql->result();
+    }
 
     public function add_inmueble($dato)
     {

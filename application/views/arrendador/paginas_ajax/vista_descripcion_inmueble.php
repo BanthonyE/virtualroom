@@ -57,7 +57,7 @@
 				</tr>
 				<tr>
 					<td><strong>Ubicación:</strong></td>
-					<td><?=$inmueble[0]->DESCRIP_INMUEBLE?></td>
+					<td><?=$inmueble[0]->NOMB_DISTRITO?></td>
 				</tr>
 			</tbody>
 		</table>

@@ -89,18 +89,10 @@ class ControllerFotos extends CI_Controller
     public function cargar_info_inmueble()
     {
 
-        $dato_tabla = 'T_INMUEBLE';
-        $dato_select['*'] = '*';
         $id_inmueble = $_POST['inmueble'];
-        $dato_where['ID_INMUEBLE'] = $id_inmueble;
-
-        $dato_general['dato_select'] = $dato_select;
-        $dato_general['dato_where'] = $dato_where;
-        $dato_general['dato_tabla'] = $dato_tabla;
 
         $this->load->model('model_inmueble');
-        $datos['inmueble'] = $this->model_inmueble->buscar_inmueble($dato_general);
-
+        $datos['inmueble'] = $this->model_inmueble->buscar_inmueble_distrito($id_inmueble);
 
         $dato_tabla2 = 'T_FOTO_INMUEBLE';
         $dato_select2['*'] = '*';
