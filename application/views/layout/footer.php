@@ -76,8 +76,6 @@
                     $(this).addClass('btn-success');
                     $(this).html('<i class="fas fa-check"></i> Revisado');
 
-
-
                     let codigo = $(this).data('estado');
 
                     $.ajax({

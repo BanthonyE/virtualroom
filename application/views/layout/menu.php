@@ -13,6 +13,7 @@
 
     <title>VirtualRoom</title>
 
+    <link rel="shortcut icon" type="image/x-icon" href="<?php base_url() ?>assets/images/favicon.ico">
     <link rel="shortcut icon" href="<?php base_url() ?>assets/img/favicon.png">
     <link rel="stylesheet" href="<?php base_url() ?>assets/css/css1/bootstrap.min.css">
     <link rel="stylesheet" href="<?php base_url() ?>assets/css/css1/plugins.css">
