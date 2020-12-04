@@ -100,6 +100,14 @@
 										<td><?= $anuncio[0]->PISO ?></td>
 									</tr>
 									<tr>
+										<td><strong>Distrito:</strong></td>
+										<?php foreach ($distrito as $d) { ?>	
+											<?php if($d->ID_DISTRITO == $anuncio[0]->ID_DISTRITO) { ?>		
+												<td><?php  echo strtolower("" . $anuncio[0]->NOMB_DISTRITO)  ?></td>
+											<?php } ?>		
+										<?php } ?>																				
+									</tr>									
+									<tr>
 										<td><strong>Dirección:</strong></td>
 										<td><?= $anuncio[0]->direccion_inmueble ?></td>
 									</tr>
@@ -122,10 +130,6 @@
 									<tr>
 										<td><strong>Servicios del Inmueble:</strong></td>
 										<td><?= $anuncio[0]->SERVICIOS_INMUEBLE ?></td>
-									</tr>
-									<tr>
-										<td><strong>Ubicación:</strong></td>
-										<td><?= $anuncio[0]->DESCRIP_INMUEBLE ?></td>
 									</tr>
 								</tbody>
 							</table>

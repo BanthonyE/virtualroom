@@ -141,7 +141,7 @@ if (isset($info)) {
                                     <label class="col-md-3 control-label" for="product-price">Precio por Mes: </label>
                                     <div class="col-md-8">
                                         <div class="input-group">
-                                            <input type="text" id="txtprecio" name="txtprecio" required pattern="[0-9]{1,3}" class="form-control" placeholder="maximo 3 digitos" value="<?= $precio ?>">
+                                            <input type="text" id="txtprecio" name="txtprecio" required pattern="[0-9]{1,4}" class="form-control" placeholder="maximo 4 digitos" value="<?= $precio ?>">
                                         </div>
                                     </div>
                                 </div>
