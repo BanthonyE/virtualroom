@@ -69,20 +69,9 @@ class Model_anuncio extends CI_Model
         $sql = $this->db->join('T_PERSONA per', 'per.ID_PERSONA = usureg.ID_PERSONA');
         $sql = $this->db->join('T_FOTO_INMUEBLE foto', 'foto.ID_FOTO = anun.PORTADA_ANUNCIO');
         $sql = $this->db->join('T_DISTRITO dis', 'dis.ID_DISTRITO = inm.ID_DISTRITO');
-        $sql = $this->db->where('anun.ID_INMUEBLE', $dato);
+        $sql = $this->db->where('anun.ID_ANUNCIO', $dato);
         $sql = $this->db->get();
         return $sql->result();
-/*      $this->db->select('*,in.DIRECCION as `direccion_inmueble`');
-        $this->db->from('T_ANUNCIO_VISITANTE anuvist');
-        $this->db->join('T_VISITANTE vist', 'vist.ID_VISITANTE = anuvist.ID_VISITANTE');
-        $this->db->join('T_ANUNCIO anu', 'anu.ID_ANUNCIO = anuvist.ID_ANUNCIO');
-        $this->db->join('T_INMUEBLE in', 'in.ID_INMUEBLE = anu.ID_INMUEBLE');
-        $this->db->join('T_DISTRITO dist', 'dist.ID_DISTRITO = in.ID_DISTRITO');
-        $this->db->join('T_PROVINCIA prov', 'prov.ID_PROVINCIA = prov.ID_PROVINCIA');
-        $this->db->join('T_DEPARTAMENTO dep', 'dep.ID_DEPARTAMENTO = prov.ID_DEPARTAMENTO');
-        $this->db->Where('anuvist.ID_visitante', $dato);
-        $sql = $this->db->get();
-        return $sql->result(); */
     }
     public function get_valoracion($dato)
     {

@@ -164,18 +164,17 @@
 									<p><?= $anuncio[0]->NOMB_PERSONA ?>
 										<?= $anuncio[0]->APE_PERSONA ?><br><?= $anuncio[0]->CELULAR ?></p>
 								</div>
+								<h5><a href="#mensaje" class="btn btn-info">Contactar</a></h5>
 
 								<?php if (isset($var)) { ?>
 									<h6><a onclick="visualizar_recorrido('<?= $var ?>');" class="btn btn-primary">Recorrido
 											360°</a></h5>
 									<?php } ?>
 
-									<h5><a href="#" class="btn btn-info">Contactar</a></h5>
-
 							</div>
 
 							<h6><span class="glyphicon glyphicon-thumbs-up"></span> Valoracion</h6>
-							<div class="listing-detail">
+							<div class="listing-detail" id="mensaje">
 								<a onclick="valoracion('5','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if ($resultado_valoracion == 5) { ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Muy Bueno">5</span></a>
 								<a onclick="valoracion('4','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if ($resultado_valoracion == 4) { ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Bueno">4</span></a>
 								<a onclick="valoracion('3','<?= $anuncio[0]->ID_ANUNCIO ?>');"><span class="valoracion <?php if ($resultado_valoracion == 3) { ?> active <?php } ?>" data-toggle="tooltip" data-placement="bottom" data-original-title="Normal">3</span></a>
