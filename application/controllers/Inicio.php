@@ -97,15 +97,7 @@ class Inicio extends CI_Controller
 	{
 		$id_anuncio = $_POST['btnDetalle'];
 
-		$dato_tabla = 'T_ANUNCIO';
-		$dato_select['*'] = '*';
-		$dato_where['ID_ANUNCIO'] = $id_anuncio;
-
-		$dato_general['dato_select'] = $dato_select;
-		$dato_general['dato_where'] = $dato_where;
-		$dato_general['dato_tabla'] = $dato_tabla;
-
-		$dato['anuncio'] = $this->model_anuncio->get_detalle_anuncio($dato_general);
+		$dato['anuncio'] = $this->model_anuncio->get_detalle_anuncio($id_anuncio);
 
 		$valoracion = $this->model_anuncio->get_valoracion($id_anuncio);
 		
