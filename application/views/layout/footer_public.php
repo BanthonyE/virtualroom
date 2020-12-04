@@ -73,7 +73,7 @@
 <script src="<?php base_url() ?>assets/js/jquery-3.4.1.min.js"></script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZeiDPxXg4WA3gH2eKd9V18CMmxziWfXM&callback=initMap&libraries=&v=weekly" defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmjQezy3AlQ9MKZLBHy-6mCqpF5d78q7w&callback=initMap&libraries=&v=weekly" defer></script>
 
 <script src="<?php base_url() ?>assets/bootstrap/js/bootstrap.js"></script>
 <script src="<?php base_url() ?>assets/js/script.js"></script>
@@ -125,9 +125,8 @@
 	function initMap(){
 		var distrito = $('#distrito').val();
 		var direccion = $('#direccion').val();
-		var numdireccion = $('#numdireccion').val();
-			
-		let url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + direccion + '+' + numdireccion + '+' + distrito + '&key=AIzaSyDZeiDPxXg4WA3gH2eKd9V18CMmxziWfXM&callback=initMap';
+		var numdireccion = $('#numdireccion').val();	
+		let url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + direccion + '+' + numdireccion + '+' + distrito + '&key=AIzaSyDmjQezy3AlQ9MKZLBHy-6mCqpF5d78q7w&callback=initMap';
 
 		const api = new XMLHttpRequest();
 		api.open('GET', url, true);
