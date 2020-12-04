@@ -20,7 +20,8 @@
 				</form>
 			</div>
 			<div class="col-lg-6 col-sm-6 ">
-				<div class="well"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="hzttps://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Pulchowk,+Patan,+Central+Region,+Nepal&amp;aq=0&amp;oq=pulch&amp;sll=37.0625,-95.677068&amp;sspn=39.371738,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Pulchowk,+Patan+Dhoka,+Patan,+Bagmati,+Central+Region,+Nepal&amp;ll=27.678236,85.316853&amp;spn=0.001347,0.002642&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+				<div class="well">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3377.388517018919!2d-76.96810610262935!3d-12.03837159997954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c42a8f5d1217%3A0x33bd05007fe9cf07!2sNew%20Store-Camila-!5e0!3m2!1ses-419!2spe!4v1607122090877!5m2!1ses-419!2spe" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 				</div>
 			</div>
 		</div>

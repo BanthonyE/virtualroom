@@ -41,7 +41,7 @@
 				<!-- Nav Starts -->
 				<div class="navbar-collapse  collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li <?php if ($this->uri->segment(1)=='inicio' || $this->uri->segment(1)==''){ ?>class="active" <?php }?>><a href="inicio">Inicio</a></li>
+						<li <?php if ($this->uri->segment(1)=='inicio' || $this->uri->segment(1)=='' || $this->uri->segment(1)=='Inicio'){ ?>class="active" <?php }?>><a href="inicio">Inicio</a></li>
 						<li <?php if ($this->uri->segment(1)=='nosotros'){ ?>class="active" <?php }?>><a href="nosotros">Acerca de nosotros</a></li>
 						<li <?php if ($this->uri->segment(1)=='ayuda'){ ?>class="active" <?php }?>><a href="ayuda">Ayuda</a></li>
 						<li <?php if ($this->uri->segment(1)=='contactenos'){ ?>class="active" <?php }?>><a href="contactenos">Contáctenos</a></li>
