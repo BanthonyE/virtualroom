@@ -76,6 +76,9 @@
 <script src="<?php base_url() ?>assets/bootstrap/js/bootstrap.js"></script>
 <script src="<?php base_url() ?>assets/js/script.js"></script>
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" defer></script>
+
 <!-- Owl stylesheet -->
 <script src="<?php base_url() ?>assets/owl-carousel/owl.carousel.js"></script>
 <!-- Owl stylesheet -->
@@ -117,6 +120,40 @@
             height: 700
         })
 	}
+
+	var coord2 =[];
+	let map;
+
+	function initMap(){
+		var distrito = $('#distrito').val();
+		var direccion = $('#direccion').val();
+		var numdireccion = $('#numdireccion').val();
+			
+		let url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + direccion + '+' + numdireccion + '+' + distrito + '&key=AIzaSyDmjQezy3AlQ9MKZLBHy-6mCqpF5d78q7w&callback=initMap';
+
+		const api = new XMLHttpRequest();
+		api.open('GET', url, true);
+		api.send();
+
+		api.onreadystatechange = function () {
+			if (this.status == 200 && this.readyState == 4) {
+
+				let datos = JSON.parse(this.responseText);
+				var coord = datos.results[0].geometry.location;
+		map = new google.maps.Map(document.getElementById("map"), {
+			center: coord,
+			zoom: 15,
+
+		});
+		var marker = new google.maps.Marker({
+			position: coord,
+			map: map
+			});
+		
+			}
+		} 
+	}
+
 	function valoracion($var1, $var2) {
 		let puntuacion = $var1;
 		let id_anuncio = $var2;

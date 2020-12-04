@@ -137,6 +137,8 @@ class Inicio extends CI_Controller
 		$dato_general3['dato_where'] = $dato_where3;
 
 		$dato['lista_anuncios'] = $this->model_anuncio->get_list($dato_general3);
+		$this->load->model('model_distrito');
+		$dato['distrito'] = $this->model_distrito->get_distrito();
 
 		$this->llamarpagina_visitante('descripcion_anuncio', $dato, 'sin banner', 'sin mensaje');
 	}

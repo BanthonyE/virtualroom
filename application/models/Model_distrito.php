@@ -18,4 +18,12 @@ class Model_distrito extends CI_Model
         $sql = $this->db->get();
         return $sql->result();
     }
+
+    public function get_distrito()
+    {
+        $sql = $this->db->select('*');
+        $sql = $this->db->from('T_DISTRITO');
+        $sql = $this->db->get();
+        return $sql->result();
+    }
 }
