@@ -133,11 +133,10 @@
 									</tr>
 								</tbody>
 							</table>
-
 						</div>
 
 						<div>
-							<h4><span class="glyphicon glyphicon-map-marker"></span> Localizacion</h4>
+							<h4><span class="glyphicon glyphicon-map-marker"></span> Localización</h4>
 							<div class="well" id="map" style="width:100%;height:400px">
 								<input type="hidden" value="<?= $anuncio[0]->direccion_inmueble ?>" id="direccion">
 								<input type="hidden" value="<?= $anuncio[0]->NRO_DIRECCION ?>" id="numdireccion">

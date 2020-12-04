@@ -18,6 +18,14 @@ class Model_arrendatario extends CI_Model
         $sql = $this->db->get();
         return $sql->result();
     }
+    public function get_arrendatario(){
+        $sql = $this->db->select('per.EMAIL, per.CELULAR');
+        $sql = $this->db->from('T_USUARIO_REGISTRADO usu');
+        $sql = $this->db->join('T_PERSONA per', 'per.ID_PERSONA = usu.ID_PERSONA');
+        $sql = $this->db->where('usu.ID_TIPOUSUARIO',3);
+        $sql = $this->db->get();
+        return $sql->result();
+    }
 
     public function view_uno_visitante_anuncio_arrendador($dato)
     {

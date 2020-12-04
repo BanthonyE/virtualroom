@@ -45,10 +45,8 @@
                                 <td class="text-center"><?= $pub->NOMB_INMUEBLE ?></td>
                                 <td class="text-center">
                                     <div class="btn-group">
-                                        <a data-toggle="tooltip" id="btnEstado" name="btnEstado" title="Ver Fotos" href="" class="btn btn-xs btn-default" value="<?= $pub->ID_ANUNCIO ?>"><i class="fa fa-bullseye"></i></a>
                                         <a data-toggle="tooltip" id="btnEditar" name="btnEditar" title="Editar" class="btn btn-xs btn-default" href="modificar_anuncio?id=<?= $pub->ID_ANUNCIO ?>"><i class="fas fa-edit"></i></a>
                                         <a data-toggle="tooltip" onclick="return confirm('¿Estas seguro de Eliminar este anuncio?')" id="btnEliminar" name="btnEliminar" title="Eliminar" class="btn btn-xs btn-danger" href="eliminar_anuncio?id=<?= $pub->ID_ANUNCIO ?>"><i class="fas fa-trash-alt"></i></a>
-
                                     </div>
                                 </td>
                             </tr>

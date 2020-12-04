@@ -2,7 +2,7 @@ $('#enviarEmail').click(function () {
 
 
 	if ($.trim($('#txtnombre').val()).length == 0) {
-		error_txtnombre = 'Ingrese el su nombre';
+		error_txtnombre = 'Ingrese su nombre';
 		$('#error_txtnombre').text(error_txtnombre);
 		$('#txtnombre').addClass('has-error');
 	} else {

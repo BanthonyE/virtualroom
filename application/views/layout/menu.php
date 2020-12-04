@@ -151,7 +151,20 @@
                                             <a href="ver_pub" method="POST" class=" <?php if ($uri == 'ver_pub') { ?> active <?php } ?>">Ver Publicaciones</a>
                                         </li>
                                     </ul>
-                                </li>                                
+                                </li>     
+                                <li class=" <?php if (($uri == 'galeria-imagenes')) { ?> active <?php } ?>">
+                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+                                        <i class="fas fa-photo-video"></i>
+                                        <span class="sidebar-nav-mini-hide">
+                                            Subir Imágenes
+                                        </span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="galeria-imagenes" class=" <?php if ($uri == 'galeria-imagenes') { ?> active <?php } ?>">Ver Galería de Imágenes</a>
+                                        </li>
+                                    </ul>
+                                </li>                                                           
                                 <li class=" <?php if (($uri == 'ver_visitantes') || ($uri == 'ver_usuarios_registrados')) { ?> active <?php } ?>">
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i>
                                         <i class="fas fa-users"></i>
@@ -165,19 +178,6 @@
                                         </li>
                                         <li>
                                             <a href="ver_usuarios_registrados" method="POST" class=" <?php if ($uri == 'ver_usuarios_registrados') { ?> active <?php } ?>">Ver Usuarios Registrados</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class=" <?php if (($uri == 'galeria-imagenes')) { ?> active <?php } ?>">
-                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i>
-                                        <i class="fas fa-photo-video"></i>
-                                        <span class="sidebar-nav-mini-hide">
-                                            Imágenes
-                                        </span>
-                                    </a>
-                                    <ul>
-                                        <li>
-                                            <a href="galeria-imagenes" class=" <?php if ($uri == 'galeria-imagenes') { ?> active <?php } ?>">Ver Galería de Imágenes</a>
                                         </li>
                                     </ul>
                                 </li>

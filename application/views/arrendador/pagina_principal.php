@@ -80,7 +80,7 @@
 										<td><?= $usuario[0]->CELULAR ?></td>
 									</tr>
 									<tr>
-										<td class="text-right"><strong>Teléfono</strong></td>
+										<td class="text-right"><strong>Dirección</strong></td>
 										<td><?= $usuario[0]->DIRECCION ?></td>
 									</tr>
 									<tr>

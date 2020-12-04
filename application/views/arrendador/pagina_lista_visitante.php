@@ -1,5 +1,4 @@
 <!-- Page content -->
-
 <div id="page-content">
     <!-- Datatables Header -->
     <div class="content-header">
@@ -65,11 +64,24 @@
                                     </div>
 
                                 </td>
+                                
+                                <?php $cont=0; foreach ($arrendatarios as $a) {
+                                    
+                                    if($a->EMAIL == $vist->CORREO_VISITANTE){
+                                        $cont++;
+                                    }                               
+                                } ?>
+
+                                
                                 <td class="text-center">
                                     <div class="btn-group">
-                                        <a id="btnRegistrar" name="btnRegistrar" title="Registrar" class="btn btn-md btn-info" href="registrar_arrendatario?id=<?= $vist->ID_VISITANTE ?>"><i class="fas fa-file-alt"></i></a>
+                                        <?php if($cont == 0) { ?>
+                                            <a id="btnRegistrar" name="btnRegistrar" title="Registrar" class="btn btn-md btn-info" href="registrar_arrendatario?id=<?= $vist->ID_VISITANTE ?>"><i class="fas fa-file-alt"></i></a>                                            
+                                        <?php }else{ ?> 
+
+                                        <?php } ?>    
                                     </div>
-                                </td>
+                                </td>                                      
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -80,33 +92,3 @@
     <!-- END Datatables Content -->
 </div>
 <!-- END Page Content -->
-<script>
-    $(document).ready(function() {
-
-        $('.btnEditar').on('click', function(e) {
-            if ($(this).hasClass("btn-danger")) {
-
-                $(this).removeClass('btn-danger');
-                $(this).addClass('btn-success');
-                $(this).html('<i class="fas fa-check"></i> Revisado');
-
-
-
-                let codigo = $(this).data('estado');
-
-                $.ajax({
-                    type: 'POST',
-                    url: "modificar_revision",
-                    data: {
-                        codigo: codigo
-                    },
-                    success: function(data) {
-
-
-                    }
-                });
-            }
-
-        })
-    })
-</script>

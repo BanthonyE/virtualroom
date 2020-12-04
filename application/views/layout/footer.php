@@ -66,6 +66,37 @@
 <?php if ($this->uri->segment(1) == 'ver-documentos') { ?>
     <script src="<?php base_url() ?>assets/js/documento.js"></script>
 <?php } ?>
+<?php if ($this->uri->segment(1) == 'ver_visitantes') { ?>
+    <script>
+        $(document).ready(function() {
+            $('.btnEditar').on('click', function(e) {
+                if ($(this).hasClass("btn-danger")) {
+
+                    $(this).removeClass('btn-danger');
+                    $(this).addClass('btn-success');
+                    $(this).html('<i class="fas fa-check"></i> Revisado');
+
+
+
+                    let codigo = $(this).data('estado');
+
+                    $.ajax({
+                        type: 'POST',
+                        url: "modificar_revision",
+                        data: {
+                            codigo: codigo
+                        },
+                        success: function(data) {
+
+
+                        }
+                    });
+                }
+
+            })
+        })
+    </script>
+<?php } ?>
 
 </body>
 

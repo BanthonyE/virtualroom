@@ -66,7 +66,7 @@ if (isset($info)) {
                                     <select id="cboinmueble" name="cboinmueble" class="select-chosen" data-placeholder="Seleccionar Categoría.." style="width: 250px;">
                                         <option></option>
                                         <?php foreach ($inmueble as $u) : ?>
-
+                                        
                                             <option value="<?= $u->ID_INMUEBLE ?>"><?= $u->NOMB_INMUEBLE ?></option>
                                         <?php endforeach; ?>
                                     </select>
@@ -116,10 +116,6 @@ if (isset($info)) {
                         <?php } else { ?>
                             <input type="hidden" id="txtestado" name="txtestado" value="1">
                         <?php } ?>
-
-
-
-
 
                         <div class="form-group form-actions">
                             <div class="col-md-9 col-md-offset-3">

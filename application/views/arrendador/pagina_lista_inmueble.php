@@ -1,5 +1,5 @@
  <!-- Page content -->
- <script src="<?php base_url() ?>assets/js/js1/vendor/jquery.min.js"></script>
+ 
  <div id="page-content">
      <!-- Datatables Header -->
      <div class="content-header">
@@ -60,8 +60,7 @@
                                  <td class="text-center"><?= $inmu->NOMB_DISTRITO ?></td>
                                  <td class="text-center"><?= $inmu->NOMB_USUARIO ?></td>
                                  <td class="text-center">
-                                     <div class="btn-group">
-                                         <a data-toggle="tooltip" id="btnEstado" name="btnEstado" title="Ver Fotos" href="" class="btn btn-xs btn-default" value="<?= $inmu->ID_INMUEBLE ?>"><i class="fa fa-bullseye"></i></a>
+                                     <div class="btn-group">                                         
                                          <a data-toggle="tooltip" id="btnEditar" name="btnEditar" title="Editar" class="btn btn-xs btn-default" href="modificar_depart?id=<?= $inmu->ID_INMUEBLE ?>"><i class="fas fa-edit"></i></a>
                                          <a data-toggle="tooltip" onclick="return confirm('¿Estas seguro de Eliminar el Departamento?')" id="btnEliminar" name="btnEliminar" title="Eliminar" class="btn btn-xs btn-danger" href="eliminar_depart?id=<?= $inmu->ID_INMUEBLE ?>"><i class="fas fa-trash-alt"></i></a>
 
@@ -77,11 +76,3 @@
      <!-- END Datatables Content -->
  </div>
  <!-- END Page Content -->
- <script>
-
- </script>
- <script>
-     $(document).ready(function() {
-
-     })
- </script>

@@ -47,6 +47,9 @@ class ControllerVisitante extends CI_Controller
 		$dato_usuario = $this->dato_usuario;
 		$dato_id_usuario = $dato_usuario['codigo_usuario'];
 
+		$this->load->model('model_arrendatario');
+		$datos['arrendatarios'] = $this->model_arrendatario->get_arrendatario();
+
 		$datos['visitantes'] = $this->model_visitante->view_visitante_anuncio_arrendador($dato_id_usuario);
 
 		$this->llamarpagina('pagina_lista_visitante', $datos);
