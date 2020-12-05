@@ -38,7 +38,7 @@
             	   </div>
             	</div>
             	<input type="submit" class="btn" value="Entrar">
-				<button onclick="window.location.href='Inicio'">Continue</button>
+				<button class="btn" onclick="window.location.href='Inicio'">Continue</button>
             </form>
         </div>
 
