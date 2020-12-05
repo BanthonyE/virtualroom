@@ -50,23 +50,29 @@
 							<div id="myCarousel" class="carousel slide" data-ride="carousel">
 								<!-- Indicators -->
 								<ol class="carousel-indicators hidden-xs">
-								
-								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-								<li data-target="#myCarousel" data-slide-to="1" class=""></li>
-								<li data-target="#myCarousel" data-slide-to="2" class=""></li>
-										
+									<?php $cont2 = 0;
+									foreach ($fotos as $f) { ?>
+										<?php if (($f->TIPO_FOTO == 1) && ($f->ESTADO_FOTO == 1)) { ?>
+											<li data-target="#myCarousel" data-slide-to="<?= $cont2 ?>" class="<?php if ($cont2 == 0) { echo "active"; } ?>"></li>
+										<?php } ?>
 
+									<?php $cont2++;
+									} ?>
 								</ol>
+								
 								<div class="carousel-inner">
-									<?php foreach ($fotos as $f) { ?>
+									<?php $cont = 0;
+									foreach ($fotos as $f) { ?>
 										<?php if ($f->TIPO_FOTO == 1) { ?>
-												<div class="item active">
-													<img src="<?php echo base_url('uploads/files/'.$f->NOMB_FOTO) ?>" class="properties cover-img-descripcion" alt="properties" />
+											<?php if ($f->ESTADO_FOTO == 1) { ?>
+												<div class="item <?php if ($cont == 0) { echo "active"; } ?>">
+													<img src="<?php echo base_url('uploads/files/' . $f->NOMB_FOTO) ?>" class="properties cover-img-descripcion" alt="properties" />
 												</div>
+											<?php $cont++; } ?>
 										<?php } else {
 											$var = $f->NOMB_FOTO;
 										} ?>
-									<?php
+									<?php 
 									} ?>
 								</div>
 
