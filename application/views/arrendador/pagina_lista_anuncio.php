@@ -24,6 +24,7 @@
                     <thead>
                         <tr>
                             <th class="text-center">Código</th>
+                            <th class="text-center">Tíulo</th>
                             <th class="text-center">Descripción </th>
                             <th class="text-center">Fecha Creada</th>
                             <th class="text-center">Estado</th>
@@ -35,6 +36,7 @@
                         <?php foreach ($publicacion as $pub) : ?>
                             <tr>
                                 <td class="text-center"><?= $pub->ID_ANUNCIO ?></td>
+                                <td class="text-center"><?= $pub->NOMB_ANUNCIO ?></td>
                                 <td class="text-center"><?= $pub->DESCRIP_ANUNCIO ?></td>
                                 <td class="text-center"><?= $pub->FECHA_ANUNCIO ?></td>
                                 <?php if ($pub->ESTADO_ANUNCIO == 1) { ?>
