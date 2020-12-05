@@ -10,7 +10,7 @@
 						<h2><a href="detalle-anuncio"><?= $a->TITULO_ANUNCIO ?></a></h2>
 						<h2 style="font-size:20px; margin-top:0px; padding:0px;"><a href="#"><?= $a->NRO_HABITACIONES ?> Habitaciones, <?= $a->NRO_BAÑOS ?> Baños, <?= $a->METROS_CUADRADOS ?> Metros cuadrados</a></h2>
 						<blockquote>
-							<p class="location"><span class="glyphicon glyphicon-map-marker"></span> <?= $a->DIRECCION ?> <?= $a->NRO_DIRECCION ?> <?= strtolower($a->NOMB_DISTRITO) ?>
+							<p class="location"><span class="glyphicon glyphicon-map-marker"></span> <?= $a->direccion_inmueble ?> <?= $a->NRO_DIRECCION ?> <?= strtolower($a->NOMB_DISTRITO) ?>
 							</p>
 							<p>Tu ubicación, nuestra obsesión.</p>
 							<cite>S/. <?= $a->PRECIO_MES ?>.00</cite>
