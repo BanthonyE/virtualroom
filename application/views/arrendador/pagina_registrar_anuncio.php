@@ -66,7 +66,7 @@ if (isset($info)) {
                                     <select id="cboinmueble" name="cboinmueble" class="select-chosen" data-placeholder="Seleccionar Categoría.." style="width: 250px;">
                                         <option></option>
                                         <?php foreach ($inmueble as $u) : ?>
-                                        
+
                                             <option value="<?= $u->ID_INMUEBLE ?>"><?= $u->NOMB_INMUEBLE ?></option>
                                         <?php endforeach; ?>
                                     </select>
@@ -83,7 +83,7 @@ if (isset($info)) {
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="product-short-name">Descripcion: </label>
                             <div class="col-md-9">
-                                <textarea id="txtdescripcion" name="txtdescripcion" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,60}" class="form-control" placeholder="minimo 2 caracteres" rows="3"><?= $descrip ?></textarea>
+                                <textarea id="txtdescripcion" name="txtdescripcion" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,200}" class="form-control" placeholder="minimo 2 caracteres" rows="3"><?= $descrip ?></textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -93,6 +93,7 @@ if (isset($info)) {
                                     <input type="text" class="form-control text-center" name="txtfecha" id="txtfecha" readonly value="<?= $fecha ?>" />
 
                                 <?php } else { ?>
+                                    <?php date_default_timezone_set('America/Lima'); ?>
                                     <input type="text" class="form-control text-center" name="txtfecha" id="txtfecha" readonly value="<?= date("Y-m-d H:i:s") ?>" />
                                 <?php } ?>
                             </div>

@@ -97,7 +97,7 @@ if (isset($info)) {
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="product-short-name">Direccion: </label>
                                     <div class="col-md-9">
-                                        <textarea id="Direccion" name="txtdireccion" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,60}" class="form-control" placeholder="Ingrese minimo 2 caracteres.." rows="3"><?= $direccion ?></textarea>
+                                        <textarea id="Direccion" name="txtdireccion" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,200}" class="form-control" placeholder="Ingrese minimo 2 caracteres.." rows="3"><?= $direccion ?></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -148,7 +148,7 @@ if (isset($info)) {
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="product-short-name">Descripcion del Departamento: </label>
                                     <div class="col-md-9">
-                                        <textarea id="Descripcion" name="txtdescripcion" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,60}" class="form-control" placeholder="Ingrese minimo 2 caracteres.." rows="7"> <?= $descrip ?></textarea>
+                                        <textarea id="Descripcion" name="txtdescripcion" required pattern="[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,200}" class="form-control" placeholder="Ingrese minimo 2 caracteres.." rows="7"> <?= $descrip ?></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">

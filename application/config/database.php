@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
@@ -69,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
-*/
+/* */
 $active_group = 'default';
 $query_builder = TRUE;
 
@@ -93,9 +93,9 @@ $query_builder = TRUE;
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
-); */
+);  */
 
-	$db['default'] = array(
+$db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'us-cdbr-east-02.cleardb.com',
 	'username' => 'b7520c0bb070a8',

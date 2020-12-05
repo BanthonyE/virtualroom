@@ -18,11 +18,12 @@ class Model_arrendatario extends CI_Model
         $sql = $this->db->get();
         return $sql->result();
     }
-    public function get_arrendatario(){
+    public function get_arrendatario()
+    {
         $sql = $this->db->select('per.EMAIL, per.CELULAR');
         $sql = $this->db->from('T_USUARIO_REGISTRADO usu');
         $sql = $this->db->join('T_PERSONA per', 'per.ID_PERSONA = usu.ID_PERSONA');
-        $sql = $this->db->where('usu.ID_TIPOUSUARIO',3);
+        $sql = $this->db->where('usu.ID_TIPOUSUARIO', 3);
         $sql = $this->db->get();
         return $sql->result();
     }
@@ -140,6 +141,7 @@ class Model_arrendatario extends CI_Model
         $sql = $this->db->join('T_INMUEBLE depa', 'depa.ID_INMUEBLE = dep_visi.ID_DEPARTAMENTO');
         $sql = $this->db->join('T_USUARIO_REGISTRADO usu', 'usu.ID_USUARIO = dep_visi.ID_VISITANTE');
         $sql = $this->db->join('T_PERSONA persona', 'persona.ID_PERSONA = usu.ID_PERSONA');
+        $sql = $this->db->join('T_DISTRITO dis', 'dis.ID_DISTRITO = depa.ID_DISTRITO');
         $sql = $this->db->Where($dato['dato_where']);
         $sql = $this->db->get();
         return $sql->result();
