@@ -166,9 +166,11 @@
                                 </div>
                                 <div class="vista360" style="display:none;">
                                     <div class="form-group">
-                                        <label class="col-md-8 control-label" for="product-name">Ingresar URL del Recorrido: </label>
+                                    
+                                        <label class="col-md-10 control-label" for="product-name">Ingresar URL del Recorrido: </label>
+                                        <label class="col-md-10 control-label" for="product-name"><a href="https://www.divein.studio/" target="_blank"> Crear enlace recorrido Virtual</a></label>
                                         <div class="col-md-12">
-                                            <input type="text" required class="form-control" name="txturl" />
+                                            <input type="text" required class="form-control" name="txturl" placeholder="Pegar la URL del recorrido virtual"/>
                                         </div>
                                     </div>
                                 </div>

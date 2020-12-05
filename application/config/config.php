@@ -24,9 +24,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |
 */
 
-/* $config['base_url'] = 'http://localhost:90/virtualroom/'; */
+$config['base_url'] = 'http://localhost:90/virtualroom/';
 /* $config['base_url'] = 'https://virtualroom0.herokuapp.com/'; */
-$config['base_url'] = 'https://vroom360.herokuapp.com/';
+/* $config['base_url'] = 'https://vroom360.herokuapp.com/'; */
 
 /*
 |--------------------------------------------------------------------------
