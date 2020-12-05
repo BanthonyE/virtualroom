@@ -3,6 +3,7 @@
 <head>
 	<title>VirtualRoom</title>
 	<link rel="stylesheet" type="text/css" href="<?php base_url() ?>assets/css/login.css">
+	<link rel="shortcut icon" type="image/x-icon" href="<?php base_url() ?>assets/images/favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,10 +39,13 @@
             	</div>
             	<input type="submit" class="btn" value="Entrar">
             </form>
+        </div>
+		<div class="login-content">
 			<form method="POST" action="Inicio">
 				<input type="submit" class="btn" value="Regresar">
             </form>
         </div>
+
     </div>
     <script type="text/javascript" src="<?php base_url() ?>assets/js/login.js"></script>
 </body>
