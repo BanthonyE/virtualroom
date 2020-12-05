@@ -36,9 +36,10 @@
            		    	<input type="password" name="password" class="input">
             	   </div>
             	</div>
-            	<a href="#">Olvidaste tu contraseña?</a>
             	<input type="submit" class="btn" value="Entrar">
-            	<a href="Inicio" class="btn">Regresar</a>
+            </form>
+			<form method="POST" action="Inicio">
+				<input type="submit" class="btn" value="Regresar">
             </form>
         </div>
     </div>
