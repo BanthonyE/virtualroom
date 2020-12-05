@@ -37,7 +37,8 @@
             	   </div>
             	</div>
             	<a href="#">Olvidaste tu contraseña?</a>
-            	<input type="submit" class="btn" value="Login">
+            	<input type="submit" class="btn" value="Entrar">
+            	<a href="Inicio" class="btn">Regresar</a>
             </form>
         </div>
     </div>
