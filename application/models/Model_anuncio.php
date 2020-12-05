@@ -31,9 +31,10 @@ class Model_anuncio extends CI_Model
     public function view_anuncio_inmueble($dato)
     {
         $this->db->select('*');
-        $this->db->from('T_ANUNCIO');
-        $this->db->join('T_INMUEBLE', 'T_INMUEBLE.ID_INMUEBLE = T_ANUNCIO.ID_INMUEBLE');
-        $this->db->Where('ID_ANUNCIO', $dato);
+        $this->db->from('T_ANUNCIO anu');
+        $this->db->join('T_INMUEBLE inm', 'inm.ID_INMUEBLE = anu.ID_INMUEBLE');
+        $this->db->join('T_DISTRITO dis', 'dis.ID_DISTRITO = inm.ID_DISTRITO');
+        $this->db->Where('anu.ID_ANUNCIO', $dato);
         $sql = $this->db->get();
         return $sql->result();
     }
@@ -77,7 +78,7 @@ class Model_anuncio extends CI_Model
     {
         $sql = $this->db->select('*');
         $sql = $this->db->from('T_VALORACION');
-        $sql = $this->db->where('ID_ANUNCIO',$dato);
+        $sql = $this->db->where('ID_ANUNCIO', $dato);
         $sql = $this->db->get();
         return $sql->result();
     }
@@ -99,9 +100,10 @@ class Model_anuncio extends CI_Model
     {
         $this->db->insert($dato['dato_tabla'], $dato['dato_insert']);
     }
-    public function update_valoracion($dato){
+    public function update_valoracion($dato)
+    {
         $this->db->set($dato['dato_update'], $dato['dato_update'] . '+1', FALSE);
         $this->db->where($dato['dato_where']);
-        $this->db->update('T_VALORACION');                
+        $this->db->update('T_VALORACION');
     }
 }
