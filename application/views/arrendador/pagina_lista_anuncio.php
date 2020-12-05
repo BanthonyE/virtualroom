@@ -36,7 +36,7 @@
                         <?php foreach ($publicacion as $pub) : ?>
                             <tr>
                                 <td class="text-center"><?= $pub->ID_ANUNCIO ?></td>
-                                <td class="text-center"><?= $pub->NOMB_ANUNCIO ?></td>
+                                <td class="text-center"><?= $pub->TITULO_ANUNCIO ?></td>
                                 <td class="text-center"><?= $pub->DESCRIP_ANUNCIO ?></td>
                                 <td class="text-center"><?= $pub->FECHA_ANUNCIO ?></td>
                                 <?php if ($pub->ESTADO_ANUNCIO == 1) { ?>
