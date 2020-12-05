@@ -62,7 +62,7 @@
 		<!-- Header Starts -->
 		<div class="header">
 			<a class="" href="inicio"><img src="<?php base_url() ?>assets/images/virtualroom.png" alt="Realestate" style="width:160px;"></a>
-			<h3 style="color:#7FCC26;">A un click de distancia, haz realidad tus sueños.</h3>
+			<label style="color:#7FCC26" ;>A un click de distancia, haz realidad tu sueños</label>
 			<ul class="pull-right">			
         		<li><button class="btn-login" data-toggle="modal" data-target="#loginpop">Login</button></li>
 			</ul>
