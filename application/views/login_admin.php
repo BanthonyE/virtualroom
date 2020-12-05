@@ -38,11 +38,7 @@
             	   </div>
             	</div>
             	<input type="submit" class="btn" value="Entrar">
-            </form>
-        </div>
-		<div class="login-content">
-			<form method="POST" action="Inicio">
-				<input type="submit" class="btn" value="Regresar">
+				<button onclick="window.location.href='Inicio'">Continue</button>
             </form>
         </div>
 
