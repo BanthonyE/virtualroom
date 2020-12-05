@@ -3,70 +3,21 @@
 
 		<div class="sl-slider">
 
-			<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-				<div class="sl-slide-inner">
-					<div class="bg-img bg-img-1"></div>
-					<h2><a href="#">2 Dormitorios, 1 sala y 1 comedor, Apartamento en Alquiler</a></h2>
-					<blockquote>
-						<p class="location"><span class="glyphicon glyphicon-map-marker"></span> Av. Delta, Los Olivos
-						</p>
-						<p>Tu ubicación, nuestra obsesión.</p>
-						<cite>S/. 20,000,000</cite>
-					</blockquote>
+			<?php $c=1; foreach ($anuncio as $a) { ?>
+				<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+					<div class="sl-slide-inner">
+						<div class="bg-img bg-img-<?=$c?>"></div>
+						<h2><a href="detalle-anuncio"><?= $a->TITULO_ANUNCIO ?></a></h2>
+						<h2 style="font-size:20px; margin-top:0px; padding:0px;"><a href="#"><?= $a->NRO_HABITACIONES ?> Habitaciones, <?= $a->NRO_BAÑOS ?> Baños, <?= $a->METROS_CUADRADOS ?> Metros cuadrados</a></h2>
+						<blockquote>
+							<p class="location"><span class="glyphicon glyphicon-map-marker"></span> <?= $a->DIRECCION ?> <?= $a->NRO_DIRECCION ?> <?= strtolower($a->NOMB_DISTRITO) ?>
+							</p>
+							<p>Tu ubicación, nuestra obsesión.</p>
+							<cite>S/. <?= $a->PRECIO_MES ?>.00</cite>
+						</blockquote>
+					</div>
 				</div>
-			</div>
-
-			<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-				<div class="sl-slide-inner">
-					<div class="bg-img bg-img-2"></div>
-					<h2><a href="#">4 Dormitorios, 2 sala y 1 comedor, Apartamento en Alquiler</a></h2>
-					<blockquote>
-						<p class="location"><span class="glyphicon glyphicon-map-marker"></span> Av. Quekchup, Hamburg
-						</p>
-						<p>No busques más, has llegado al final del camino</p>
-						<cite>$ 45,000,000</cite>
-					</blockquote>
-				</div>
-			</div>
-
-			<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-				<div class="sl-slide-inner">
-					<div class="bg-img bg-img-3"></div>
-					<h2><a href="#">1 Dormitorios, 1 sala y 1 comedor, Apartamento en Alquiler</a></h2>
-					<blockquote>
-						<p class="location"><span class="glyphicon glyphicon-map-marker"></span> Av. Salazar, Puente
-							Piedra</p>
-						<p>Donde los sueños se hacen realidad.</p>
-						<cite>$ 25,000,000</cite>
-					</blockquote>
-				</div>
-			</div>
-
-			<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
-				<div class="sl-slide-inner">
-					<div class="bg-img bg-img-4"></div>
-					<h2><a href="#">3 Dormitorios, 2 sala y 2 comedor, Apartamento en Alquiler</a></h2>
-					<blockquote>
-						<p class="location"><span class="glyphicon glyphicon-map-marker"></span> Av. Checa, Check check
-							checa checa</p>
-						<p>Líder mundial en negocios inmobiliarios.</p>
-						<cite>$ 29,000,000</cite>
-					</blockquote>
-				</div>
-			</div>
-
-			<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
-				<div class="sl-slide-inner">
-					<div class="bg-img bg-img-5"></div>
-					<h2><a href="#">2 Dormitorios, 1 sala y 1 comedor, Apartamento en Alquiler</a></h2>
-					<blockquote>
-						<p class="location"><span class="glyphicon glyphicon-map-marker"></span>Av. La Hacienda,
-							Carabayllo</p>
-						<p>Juntos encontraremos el hogar de tus sueños.</p>
-						<cite>$ 15,000,000</cite>
-					</blockquote>
-				</div>
-			</div>
+			<?php if($c==5){break;} $c++; } ?>
 		</div><!-- /sl-slider -->
 
 
@@ -83,52 +34,6 @@
 </div>
 
 
-
-<div class="banner-search">
-	<div class="container">
-		<!-- banner -->
-		<!-- 		<h3>Buscar Departamento</h3>
-		<div class="searchbar">
-			<div class="row">
-				<div class="col-lg-6 col-sm-6">
-					<input type="text" class="form-control" placeholder="Ingrese nombre	">
-					<div class="row">
-						<div class="col-lg-3 col-sm-4">
-							<select class="form-control">
-								<option>Precio</option>
-								<option>$150,000 - $200,000</option>
-								<option>$200,000 - $250,000</option>
-								<option>$250,000 - $300,000</option>
-								<option>$300,000 - above</option>
-							</select>
-						</div>
-						<div class="col-lg-3 col-sm-4">
-							<select class="form-control">
-								<option>Ubicacion</option>
-								<option>Puente Piedra</option>
-								<option>Los Olivos</option>
-								<option>Carabayllo</option>
-							</select>
-						</div>
-						<div class="col-lg-3 col-sm-4">
-							<button class="btn btn-success"
-								onclick="window.location.href='buysalerent.php'">Buscar</button>
-						</div>
-					</div>
-
-
-				</div>
-				<?php if (!isset($nombre_usuario)) { ?>
-				<div class="col-lg-5 col-lg-offset-1 col-sm-6 ">
-					<p>Únnete ahora y mantente actualizado con todas las ofertas de propiedades.</p>
-					<button class="btn btn-info" data-toggle="modal" data-target="#loginpop">Login</button>
-				</div>
-				<?php } ?>
-
-			</div>
-		</div> -->
-	</div>
-</div>
 <!-- banner -->
 <div class="container">
 
@@ -147,11 +52,8 @@
 					}else{
 						$resultado_valoracion = $resultado_valoracion_dividendo/$resultado_valoracion_divisor;
 					}
-					$resultado_valoracion = (int)$resultado_valoracion;
-					
+					$resultado_valoracion = (int)$resultado_valoracion;					
 				?>
-
-
 					<div class="properties">
 						<input type="hidden" name="id_anuncio" value="1">
 						<div class="image-holder"><img class="cover-img" src="<?php echo base_url('uploads/files/' . $a->NOMB_FOTO) ?>" class="img-responsive img-anuncios" alt="properties" />

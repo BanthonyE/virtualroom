@@ -112,7 +112,7 @@ class Model_usuario extends CI_Model{
     
     function update_usuario($dato){
         $this->db->where($dato['dato_where']);
-        $this->db->update($dato['dato_tabla'], $dato['dato_update']);
+        $this->db->update('T_USUARIO_REGISTRADO', $dato['dato_update']);
     }
     function update_persona($dato){
         $this->db->where($dato['dato_where']);

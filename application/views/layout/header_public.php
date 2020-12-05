@@ -42,6 +42,7 @@
 				<div class="navbar-collapse  collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li <?php if ($this->uri->segment(1)=='inicio' || $this->uri->segment(1)=='' || $this->uri->segment(1)=='Inicio'){ ?>class="active" <?php }?>><a href="inicio">Inicio</a></li>
+						<li><a class="btn-login" data-toggle="modal" data-target="#loginpop">Login</a></li>
 						<li <?php if ($this->uri->segment(1)=='nosotros'){ ?>class="active" <?php }?>><a href="nosotros">Acerca de nosotros</a></li>
 						<li <?php if ($this->uri->segment(1)=='ayuda'){ ?>class="active" <?php }?>><a href="ayuda">Ayuda</a></li>
 						<li <?php if ($this->uri->segment(1)=='contactenos'){ ?>class="active" <?php }?>><a href="contactenos">Contáctenos</a></li>
@@ -62,9 +63,6 @@
 		<!-- Header Starts -->
 		<div class="header">
 			<a class="" href="inicio"><img src="<?php base_url() ?>assets/images/virtualroom.png" alt="Realestate" style="width:160px;"></a>
-			<label style="color:#7FCC26" ;>A un click de distancia, haz realidad tu sueños</label>
-			<ul class="pull-right">			
-        		<li><button class="btn-login" data-toggle="modal" data-target="#loginpop">Login</button></li>
-			</ul>
+			<label style="color:#7FCC26;margin-left:27%; font-size:15px">A un click de distancia, haz realidad tu sueños</label>
 		</div>		
 	</div>

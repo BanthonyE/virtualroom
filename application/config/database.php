@@ -73,12 +73,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-/* $db['default'] = array(
+$db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'virtualroom',
+	'database' => 'virtualroombd',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -93,9 +93,9 @@ $query_builder = TRUE;
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
-);  */
+); 
 
-$db['default'] = array(
+/* $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'us-cdbr-east-02.cleardb.com',
 	'username' => 'b7520c0bb070a8',
@@ -116,3 +116,4 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+ */

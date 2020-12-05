@@ -115,9 +115,12 @@ class ControllerUsuario extends CI_Controller
 
             $dato_where['ID_USUARIO'] = $dato_usuario['codigo_usuario'];
 
-            if ($_POST['txtusu'] != NULL) {
-                $nombre_usuario = $_POST['txtusu'];
-                $dato_update['NOMB_USUARIO'] = $nombre_usuario;
+            if (($_POST['txtusu'] != NULL) || ($_POST['txtpass'] != NULL)) {
+                
+                if ($_POST['txtusu'] != NULL) {
+                    $nombre_usuario = $_POST['txtusu'];
+                    $dato_update['NOMB_USUARIO'] = $nombre_usuario;
+                }
 
                 if ($_POST['txtpass'] != NULL) {
                     $password_usuario = $_POST['txtpass'];
@@ -129,8 +132,8 @@ class ControllerUsuario extends CI_Controller
 
                 $dato_general['dato_tabla'] = $dato_tabla;
                 $dato_general['dato_update'] = $dato_update;
-                $dato_general['dato_where'] = $dato_where;
-
+                $dato_general['dato_where'] = $dato_where;                
+                
                 $this->model_usuario->update_usuario($dato_general);
             }
 
@@ -184,8 +187,10 @@ class ControllerUsuario extends CI_Controller
                     'estado_usuario' => $this->dato_usuario['estado_usuario']
                 );
 
-                $this->session->set_userdata('session_name', $sess_array);
+                $this->session->set_userdata($sess_array);
+                
                 $this->dato_usuario['foto_usuario'] = $data['NOMB_FOTO'];
+
             } else {
                 $data['NOMB_FOTO'] = $this->dato_usuario['foto_usuario'];
             }

@@ -3,41 +3,12 @@
 
 		<div class="row">
 			<div class="col-lg-3 col-sm-4 ">
-
-				<div class="search-form">
-					<h4><span class="glyphicon glyphicon-search"></span> Buscar por</h4>
-					<input type="text" class="form-control" placeholder="Buscar por titulos">
-					<div class="row">
-						<div class="col-lg-7">
-							<select class="form-control">
-								<option>Precio</option>
-								<option>S/. 550.00</option>
-								<option>S/. 700.00</option>
-								<option>S/. 1,000.00</option>
-								<option>S/. 1,200.00</option>
-							</select>
-						</div>
-						<div class="col-lg-5">
-							<select class="form-control">
-								<option>Distrito</option>
-								<option>Comas</option>
-								<option>Carabayllo</option>
-								<option>Puente Piedra</option>
-							</select>
-						</div>
-					</div>
-
-					<button class="btn btn-primary">Buscar</button>
-
-				</div>
-
-
-
+			<br>				
 				<div class="hot-properties hidden-xs">
 					<h4>Recomendados</h4>
 					<form action="detalle-anuncio" method="POST">
-						<?php
-						foreach ($anuncio as $a) { ?>
+						<?php $cont=0;
+						foreach ($anuncio as $a) {?>
 
 							<div class="row">
 								<div class="col-lg-4 col-sm-5"><img src="<?php echo base_url('uploads/files/' . $a->NOMB_FOTO) ?>" class="img-responsive img-circle" alt="properties">
@@ -51,27 +22,14 @@
 								</div>
 							</div>
 
-						<?php
-						} ?>
+						<?php if($cont==2){break;}
+						$cont++; } ?>
 					</form>
 				</div>
 			</div>
-
-
-
-
 			<div class="col-lg-9 col-sm-8">
 				<div class="sortby clearfix">
-					<div class="pull-left result">Showing: 12 of 100 ></div>
-					<div class="pull-right">
-						<select class="form-control">
-							<option>Precio</option>
-							<option>S/. 550.00</option>
-							<option>S/. 700.00</option>
-							<option>S/. 1,000.00</option>
-							<option>S/. 1,200.00</option>
-						</select>
-					</div>
+				<br>
 
 				</div>
 				<div class="row">
